@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <ui:composition template="/templates/modeloFormulario.xhtml">
@@ -15,67 +14,56 @@
 
 		<h:form id="frmConsultor">
 
-			<p:toolbar>
+			<h:toolbar>
 				<f:facet name="left">
 					<h:outputText value="IC - CRIAR NOVO USUÁRIO"
 						style="text-align:center; font-size:13px !important;" />
 				</f:facet>
-			</p:toolbar>
+			</h:toolbar>
 
-			<p:panelGrid columns="1" styleClass="semBorda">
+			<h:panelGrid columns="1" styleClass="semBorda">
 
 				<br />
-				<p:outputLabel value="NOME"
+				<h:outputLabel value="NOME"
 					style="font-size:12px !important; color:#4682B4; font:bold" />
-				<p:inputText size="100" value="#{cadBean.filtro.nome}" />
+				<h:inputText size="100" value="#{cadBean.filtro.nome}" />
 				<br />
-				<p:outputLabel value="MATRÍCULA"
+				<h:outputLabel value="MATRÍCULA"
 					style="font-size:12px !important; color:#4682B4; font:bold" />
-				<p:inputText size="14" maxlength="10"
+				<h:inputText size="14" maxlength="10"
 					value="#{cadBean.filtro.matricula}" />
 				<br />
-				<p:outputLabel value="RG"
+				<h:outputLabel value="RG"
 					style="font-size:12px !important; color:#4682B4; font:bold" />
-				<p:inputText size="14" maxlength="10" value="#{cadBean.filtro.rg}" />
+				<h:inputText size="14" maxlength="10" value="#{cadBean.filtro.rg}" />
 				<br />
-				<p:outputLabel value="CPF"
+				<h:outputLabel value="CPF"
 					style="font-size:12px !important; color:#4682B4; font:bold" />
-				<p:inputMask size="14" mask="999.999.999-99"
+				<h:inputMask size="14" mask="999.999.999-99"
 					value="#{cadBean.filtro.cpf}" />
 				<br />
-				<p:outputLabel value="DT NASCIMENTO"
+				<h:outputLabel value="DT NASCIMENTO"
 					style="font-size:12px !important; color:#4682B4; font:bold" />
-				<p:inputMask size="14" mask="99/99/9999"
+				<h:inputMask size="14" mask="99/99/9999"
 					value="#{cadBean.filtro.dtnascimento}" />
 				<br />
-				<p:outputLabel value="SEXO"
+				<h:outputLabel value="SEXO"
 					style="font-size:12px !important; color:#4682B4; font:bold" />
-				<p:selectOneRadio columns="1" value="#{cadBean.filtro.sexo}">
-					<f:selectItem itemLabel="Masculino " itemValue="M" />
 
-					<f:selectItem itemLabel="Feminino" itemValue="F" />
-				</p:selectOneRadio>
 				<br />
-				<p:outputLabel value="VÍNCULO"
+				<h:outputLabel value="VÍNCULO"
 					style="font-size:12px !important; color:#4682B4; font:bold" />
-				<p:selectOneMenu style="width:250px"
-					value="#{cadBean.filtro.vinculo}">
-					<f:selectItem itemLabel="ALUNO" itemValue="01" />
-					<f:selectItem itemLabel="PROFESSOR" itemValue="02" />
-					<f:selectItem itemLabel="COORDENADOR" itemValue="03" />
-
-				</p:selectOneMenu>
 				<br />
-				<p:outputLabel value="EMAIL"
+				<h:outputLabel value="EMAIL"
 					style="font-size:12px !important; color:#4682B4; font:bold" />
-				<p:inputText size="50" maxlength="50"
+				<h:inputText size="50" maxlength="50"
 					value="#{cadBean.filtro.email}" />
-			</p:panelGrid>
+			</h:panelGrid>
 			<br />
 			<br />
-			<p:panelGrid columns="2" styleClass="semBorda">
-				<p:commandButton value="SALVAR" actionListener="#{cadBean.salvar}" />
-			</p:panelGrid>
+			<h:panelGrid columns="2" styleClass="semBorda">
+				<h:commandButton value="SALVAR" actionListener="#{cadBean.salvar}" />
+			</h:panelGrid>
 		</h:form>
 
 	</ui:define>

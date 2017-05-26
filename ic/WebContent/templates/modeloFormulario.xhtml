@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <ui:insert name="metadata" />
@@ -16,50 +15,26 @@
 
 
 <h:body>
-	<p:growl id="msgGlobal" life="5000" />
+	<h:form id="frmPrincipal">
 
-	<p:layout fullPage="true">
+		<h:menubar id="pnlPrincipal">
 
-		<p:layoutUnit header="InfoCollege" position="north" resizable="false"
-			closable="false" collapsible="false"
-			style="font-size: 20px !important; ">
+			<h:submenu label="CADASTRO">
+				<h:submenu label="Usuários">
+					<h:menuitem value="Novo"
+						outcome="/cadastro/novo.xhtml?faces-redirect=true" />
+					<h:menuitem value="Alterar/Excluir"
+						outcome="/cadastro/altera.xhtml?faces-redirect=true" />
+					<h:menuitem value="Consultar"
+						outcome="/cadastro/consulta.xhtml?faces-redirect=true" />
+				</h:submenu>
+			</h:submenu>
 
-			<h:form id="frmPrincipal">
+			<h:menuitem value="SAIR" />
 
-				<p:menubar id="pnlPrincipal">
+		</h:menubar>
 
-					<p:submenu label="CADASTRO">
-						<p:submenu label="Usuários">
-							<p:menuitem value="Novo"
-								outcome="/cadastro/novo.xhtml?faces-redirect=true" />
-							<p:menuitem value="Alterar/Excluir"
-								outcome="/cadastro/altera.xhtml?faces-redirect=true" />
-							<p:menuitem value="Consultar"
-								outcome="/cadastro/consulta.xhtml?faces-redirect=true" />
-						</p:submenu>
-					</p:submenu>
+	</h:form>
 
-					<p:menuitem value="SAIR" />
-
-				</p:menubar>
-
-			</h:form>
-
-		</p:layoutUnit>
-
-
-
-		<p:layoutUnit position="south" resizable="false" closable="false"
-			collapsible="false">
-		</p:layoutUnit>
-
-		<p:layoutUnit position="center" resizable="false" closable="false"
-			collapsible="false">
-			<ui:insert name="conteudo" />
-
-
-
-		</p:layoutUnit>
-	</p:layout>
 </h:body>
 </html>

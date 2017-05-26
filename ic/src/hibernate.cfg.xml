@@ -9,7 +9,7 @@
 
 		<!-- Database connection settings -->
 		<property name="connection.driver_class">org.postgresql.Driver</property>
-		<property name="connection.url">jdbc:postgresql://localhost:5432/db_ic</property>
+		<property name="connection.url">jdbc:postgresql://10.0.0.157:5432/db_ic</property>
 		<property name="connection.username">moises.pereira</property>
 		<property name="connection.password">edu221302</property>
 
@@ -28,9 +28,7 @@
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
 
-		<property name="hibernate.default_schema">ic</property>
-
-		<!-- Drop and re-create the database schema on startup -->
+				<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">update</property> <!-- depois mudar para validate -->
 
 		<mapping class="br.com.ic.domain.Cadastro" />
